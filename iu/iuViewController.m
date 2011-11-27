@@ -7,6 +7,7 @@
 //
 
 #import "iuViewController.h"
+#import "Common.h"
 
 @implementation iuViewController
 
@@ -23,11 +24,12 @@
 
 #pragma mark - View lifecycle
 
-- (id)initWithAddress:(NSString*)url {
+- (id)initWithAddress:(NSString*)url  del:(BOOL)del{
     
     if (self = [super init]) {
         
         self.surl = url;
+        removeable = del;
     }
     
 	return self;
@@ -38,13 +40,24 @@
     [self.site goBack];
 }
 
+- (void)del {
+    
+    [[Common instance] removeTab:self];
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     
     UIBarButtonItem* bi = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(bck)] autorelease];
     self.navigationItem.leftBarButtonItem = bi; 
 
+    if (removeable) {
+        
+        UIBarButtonItem* bi1 = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(del)] autorelease];
+        self.navigationItem.rightBarButtonItem = bi1; 
+    }
+
+    firsttime = YES;
     
     NSString* urlAdress = self.surl;//@"http://www.uniquerewards.com";
     NSURL *url = [NSURL URLWithString:urlAdress];
@@ -83,7 +96,19 @@
     }
     */
 
-    NSLog(@"Loading %@", [request.URL absoluteString]);
+    if(firsttime) {
+        
+        firsttime = NO;
+        return YES;
+    }
+
+//    NSLog(@"Loading %@", [request.URL absoluteString]);
+    
+    if ([[request.URL absoluteString] hasPrefix:TEST_STRING]) {
+        
+        [[Common instance] addTab:[request.URL absoluteString]];
+        return NO;
+    }
     
     return YES;
 }

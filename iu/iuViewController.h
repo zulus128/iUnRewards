@@ -10,10 +10,13 @@
 
 @interface iuViewController : UIViewController <UIWebViewDelegate> {
     
+    BOOL firsttime;
+    BOOL removeable;
 }
 
-- (id)initWithAddress:(NSString*)url;
+- (id)initWithAddress:(NSString*)url del:(BOOL)del;
 - (void)bck;
+- (void)del;
 
 @property (nonatomic, retain) IBOutlet UIWebView* site;
 @property (nonatomic, retain) NSString* surl;

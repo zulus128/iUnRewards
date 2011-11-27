@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD3E17F114813AF900CC7468 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3E17F014813AF900CC7468 /* Common.m */; };
 		DD830E0813F644BF00B3389A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD830E0713F644BF00B3389A /* UIKit.framework */; };
 		DD830E0A13F644BF00B3389A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD830E0913F644BF00B3389A /* Foundation.framework */; };
 		DD830E0C13F644BF00B3389A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD830E0B13F644BF00B3389A /* CoreGraphics.framework */; };
@@ -36,14 +37,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD3E17EF14813AF900CC7468 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		DD3E17F014813AF900CC7468 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		DD830E0313F644BF00B3389A /* iUnRewards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iUnRewards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD830E0713F644BF00B3389A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DD830E0913F644BF00B3389A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DD830E0B13F644BF00B3389A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		DD830E0F13F644BF00B3389A /* iUnRewards-Info.plist */ = {isa = PBXFileReference; path = "iUnRewards-Info.plist"; sourceTree = "<group>"; };
+		DD830E0F13F644BF00B3389A /* iUnRewards-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iUnRewards-Info.plist"; sourceTree = "<group>"; };
 		DD830E1113F644BF00B3389A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD830E1313F644C000B3389A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DD830E1513F644C000B3389A /* iUnRewards-Prefix.pch */ = {isa = PBXFileReference; path = "iUnRewards-Prefix.pch"; sourceTree = "<group>"; };
+		DD830E1513F644C000B3389A /* iUnRewards-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iUnRewards-Prefix.pch"; sourceTree = "<group>"; };
 		DD830E1613F644C000B3389A /* iuAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iuAppDelegate.h; sourceTree = "<group>"; };
 		DD830E1713F644C000B3389A /* iuAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iuAppDelegate.m; sourceTree = "<group>"; };
 		DD830E1A13F644C000B3389A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
@@ -52,7 +55,7 @@
 		DD830E2013F644C000B3389A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/iuViewController.xib; sourceTree = "<group>"; };
 		DD830E2713F644C000B3389A /* iUnRewardsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iUnRewardsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD830E2813F644C000B3389A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		DD830E3113F644C000B3389A /* iUnRewardsTests-Info.plist */ = {isa = PBXFileReference; path = "iUnRewardsTests-Info.plist"; sourceTree = "<group>"; };
+		DD830E3113F644C000B3389A /* iUnRewardsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iUnRewardsTests-Info.plist"; sourceTree = "<group>"; };
 		DD830E3313F644C000B3389A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD830E3513F644C000B3389A /* iuTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iuTests.h; sourceTree = "<group>"; };
 		DD830E3713F644C000B3389A /* iuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iuTests.m; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 				DD830E1613F644C000B3389A /* iuAppDelegate.h */,
 				DD830E1713F644C000B3389A /* iuAppDelegate.m */,
 				DD830E1913F644C000B3389A /* MainWindow.xib */,
+				DD3E17EF14813AF900CC7468 /* Common.h */,
+				DD3E17F014813AF900CC7468 /* Common.m */,
 				DD830E1C13F644C000B3389A /* iuViewController.h */,
 				DD830E1D13F644C000B3389A /* iuViewController.m */,
 				DD830E1F13F644C000B3389A /* iuViewController.xib */,
@@ -265,6 +270,7 @@
 				DD830E1413F644C000B3389A /* main.m in Sources */,
 				DD830E1813F644C000B3389A /* iuAppDelegate.m in Sources */,
 				DD830E1E13F644C000B3389A /* iuViewController.m in Sources */,
+				DD3E17F114813AF900CC7468 /* Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,10 +374,12 @@
 		DD830E3C13F644C000B3389A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iu/iUnRewards-Prefix.pch";
 				INFOPLIST_FILE = "iu/iUnRewards-Info.plist";
 				PRODUCT_NAME = iUnRewards;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -379,10 +387,12 @@
 		DD830E3D13F644C000B3389A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iu/iUnRewards-Prefix.pch";
 				INFOPLIST_FILE = "iu/iUnRewards-Info.plist";
 				PRODUCT_NAME = iUnRewards;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

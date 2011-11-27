@@ -12,7 +12,7 @@
 
 @interface iuAppDelegate : NSObject <UIApplicationDelegate> {
 
-    UITabBarController* tabBar;
+//    UITabBarController* tabBar;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DD830E0213F644BF00B3389A"
-               BuildableName = "iu.app"
+               BuildableName = "iUnRewards.app"
                BlueprintName = "iUnRewards"
                ReferencedContainer = "container:iUnRewards.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DD830E2613F644C000B3389A"
-               BuildableName = "iuTests.octest"
+               BuildableName = "iUnRewardsTests.octest"
                BlueprintName = "iUnRewardsTests"
                ReferencedContainer = "container:iUnRewards.xcodeproj">
             </BuildableReference>
@@ -42,7 +42,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DD830E0213F644BF00B3389A"
-            BuildableName = "iu.app"
+            BuildableName = "iUnRewards.app"
             BlueprintName = "iUnRewards"
             ReferencedContainer = "container:iUnRewards.xcodeproj">
          </BuildableReference>
@@ -60,7 +60,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DD830E0213F644BF00B3389A"
-            BuildableName = "iu.app"
+            BuildableName = "iUnRewards.app"
             BlueprintName = "iUnRewards"
             ReferencedContainer = "container:iUnRewards.xcodeproj">
          </BuildableReference>
@@ -78,7 +78,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DD830E0213F644BF00B3389A"
-            BuildableName = "iu.app"
+            BuildableName = "iUnRewards.app"
             BlueprintName = "iUnRewards"
             ReferencedContainer = "container:iUnRewards.xcodeproj">
          </BuildableReference>
