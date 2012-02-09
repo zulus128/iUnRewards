@@ -76,8 +76,8 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    //    return YES;
-    return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft)||(interfaceOrientation == UIInterfaceOrientationLandscapeRight));
+    return YES;
+//    return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft)||(interfaceOrientation == UIInterfaceOrientationLandscapeRight));
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
@@ -103,7 +103,7 @@
         return YES;
     }
 
-//    NSLog(@"Loading %@", [request.URL absoluteString]);
+    NSLog(@"Loading %@", [request.URL absoluteString]);
     
     if ([[request.URL absoluteString] hasPrefix:TEST_STRING]) {
         

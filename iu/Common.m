@@ -106,6 +106,8 @@
     
     [nav3 release];
 //    nav3 = nil;
+    
+    self.tabBar.selectedIndex = listOfViewControllers.count - 1;
 
 }
 
