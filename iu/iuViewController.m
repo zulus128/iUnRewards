@@ -105,7 +105,13 @@
 
     NSLog(@"Loading %@", [request.URL absoluteString]);
     
-    if ([[request.URL absoluteString] hasPrefix:TEST_STRING]) {
+    if ( [[request.URL absoluteString] hasPrefix:TEST_STRING]||
+            [[request.URL absoluteString] hasPrefix:TEST_STRING1]||
+            [[request.URL absoluteString] hasPrefix:TEST_STRING2]||
+            [[request.URL absoluteString] hasPrefix:TEST_STRING3]||
+            [[request.URL absoluteString] hasPrefix:TEST_STRING4]
+        )
+    {
         
         [[Common instance] addTab:[request.URL absoluteString]];
         return NO;
