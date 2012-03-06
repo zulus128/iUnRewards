@@ -12,6 +12,7 @@
     
     BOOL firsttime;
     BOOL removeable;
+    UIBarButtonItem* bi;
 }
 
 - (id)initWithAddress:(NSString*)url del:(BOOL)del;

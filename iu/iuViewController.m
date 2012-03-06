@@ -48,7 +48,66 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     
-    UIBarButtonItem* bi = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(bck)] autorelease];
+    
+    
+//    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:uibarbuttonInstance1, uibarbuttonInstance2, nil];
+
+//    UIToolbar* toolbar = [[UIToolbar alloc]
+//                          initWithFrame:CGRectMake(0, 0, 320, 45)];
+//    [toolbar setBarStyle: UIBarStyleBlackOpaque];
+//    
+//    // create an array for the buttons
+//    NSMutableArray* buttons = [[NSMutableArray alloc] initWithCapacity:5];
+//    
+//    // create a standard save button
+//    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
+//                                   initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+//                                   target:self
+//                                   action:@selector(deleteAction:)];
+//    saveButton.style = UIBarButtonItemStyleBordered;
+//    [buttons addObject:saveButton];
+//    [saveButton release];
+//    
+//    // create a standard delete button with the trash icon
+//    UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc]
+//                                     initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+//                                     target:self
+//                                     action:@selector(deleteAction:)];
+//    deleteButton.style = UIBarButtonItemStyleBordered;
+//    [buttons addObject:deleteButton];
+//    [deleteButton release];
+//    
+//    UIBarButtonItem *addbutton = [[UIBarButtonItem alloc]
+//                                  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+//                                  target:self
+//                                  action:@selector(deleteAction:)];
+//    addbutton.style = UIBarButtonItemStyleBordered;
+//    [buttons addObject:addbutton];
+//    [addbutton release];
+//    
+//    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
+//                                   initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+//                                   target:self
+//                                   action:@selector(deleteAction:)];
+//    editButton.style = UIBarButtonItemStyleBordered;
+//    [buttons addObject:editButton];
+//    [editButton release];
+//    
+//    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]
+//                                   initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+//                                   target:self
+//                                   action:@selector(deleteAction:)];
+//    doneButton.style = UIBarButtonItemStyleBordered;
+//    [buttons addObject:doneButton];
+//    [doneButton release];
+//    
+//    // put the buttons in the toolbar and release them
+//    [toolbar setItems:buttons animated:NO];
+//    [buttons release];
+    
+    
+    
+    bi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(bck)];
     self.navigationItem.leftBarButtonItem = bi; 
 
     if (removeable) {
@@ -63,9 +122,19 @@
     NSURL *url = [NSURL URLWithString:urlAdress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.site loadRequest:requestObj];
+    
+    [bi setEnabled:self.site.canGoBack];
+    
     [super viewDidLoad];
 }
 
+- (void)dealloc {
+    
+    [bi release];
+
+    [super dealloc];
+    
+}
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -78,6 +147,13 @@
     // Return YES for supported orientations
     return YES;
 //    return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft)||(interfaceOrientation == UIInterfaceOrientationLandscapeRight));
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    
+    NSLog(@"finishLoad");
+    
+    [bi setEnabled:self.site.canGoBack];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
@@ -106,17 +182,33 @@
     NSLog(@"Loading %@", [request.URL absoluteString]);
     
     if ( [[request.URL absoluteString] hasPrefix:TEST_STRING]||
-            [[request.URL absoluteString] hasPrefix:TEST_STRING1]||
-            [[request.URL absoluteString] hasPrefix:TEST_STRING2]||
-            [[request.URL absoluteString] hasPrefix:TEST_STRING3]||
-            [[request.URL absoluteString] hasPrefix:TEST_STRING4]
-        )
-    {
+            [[request.URL absoluteString] hasPrefix:TEST_STRING1]
+        )    {
         
-        [[Common instance] addTab:[request.URL absoluteString]];
+        [[Common instance] addTab:[request.URL absoluteString]title:@"Offer"];
         return NO;
     }
-    
+    if ( [[request.URL absoluteString] hasPrefix:TEST_STRING2]
+        )    {
+        
+        [[Common instance] addTab:[request.URL absoluteString]title:@"Main 2"];
+        return NO;
+    }
+    if ( [[request.URL absoluteString] hasPrefix:TEST_STRING3]||
+        [[request.URL absoluteString] hasPrefix:TEST_STRING5]||
+        [[request.URL absoluteString] hasPrefix:TEST_STRING6]
+        )    {
+        
+        [[Common instance] addTab:[request.URL absoluteString]title:@"Facebook"];
+        return NO;
+    }
+    if ( [[request.URL absoluteString] hasPrefix:TEST_STRING4]
+        )    {
+        
+        [[Common instance] addTab:[request.URL absoluteString]title:@"Twitter"];
+        return NO;
+    }
+
     return YES;
 }
 

@@ -87,13 +87,13 @@
     [self.tabBar setViewControllers:listOfViewControllers animated:YES];
 }
 
-- (void)addTab: (NSString*) str {
+- (void)addTab: (NSString*) str title:(NSString*) title {
 
     NSMutableArray* listOfViewControllers = [[NSMutableArray alloc] init];
     [listOfViewControllers addObjectsFromArray: self.tabBar.viewControllers];
     
     iuViewController* vc3 = [[iuViewController alloc] initWithAddress:str del:YES];
-    vc3.title = @"Offer";
+    vc3.title = title;//@"Offer";
     UINavigationController* nav3 = [[UINavigationController alloc] initWithRootViewController:vc3];
     nav3.navigationBar.hidden = NO;
 
