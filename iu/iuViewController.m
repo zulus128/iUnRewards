@@ -24,12 +24,13 @@
 
 #pragma mark - View lifecycle
 
-- (id)initWithAddress:(NSString*)url  del:(BOOL)del{
+- (id)initWithAddress:(NSString*)url  del:(BOOL)del mail:(BOOL)mail{
     
     if (self = [super init]) {
         
         self.surl = url;
         removeable = del;
+        pmail = mail;
     }
     
 	return self;
@@ -43,6 +44,34 @@
 - (void)del {
     
     [[Common instance] removeTab:self];
+}
+
+- (void)refrMail {
+ 
+    if(pmail) {
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [Common instance].pemail = [prefs stringForKey:@"email"];
+        if(([Common instance].pemail == nil) || ([[Common instance].pemail isEqualToString:@""]))
+            [Common instance].pemail = @"http://gmail.com";
+        
+        [prefs setObject:[Common instance].pemail forKey:@"email"];
+        [prefs synchronize];
+        
+        NSLog(@"pemail = %@", [Common instance].pemail);
+        
+        NSURL *url = [NSURL URLWithString:[Common instance].pemail];
+        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+        [self.site loadRequest:requestObj];
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+
+    [super viewWillAppear:animated];
+    
+    [self refrMail];
+
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -118,10 +147,12 @@
 
     firsttime = YES;
     
+    if(!pmail) {
     NSString* urlAdress = self.surl;//@"http://www.uniquerewards.com";
     NSURL *url = [NSURL URLWithString:urlAdress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.site loadRequest:requestObj];
+    }
     
     [bi setEnabled:self.site.canGoBack];
     

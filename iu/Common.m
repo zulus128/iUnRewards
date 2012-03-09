@@ -13,6 +13,7 @@
 @implementation Common
 
 @synthesize tabBar;
+@synthesize pemail;
 
 + (Common*) instance  {
 	
@@ -28,23 +29,33 @@
 	return instance;
 }
 
+- (void)refrMail {
+    
+    [vc2 refrMail];
+}
+
 - (id) init{	
 	
 	self = [super init];
 	if(self !=nil) {
         
-        iuViewController* vc1 = [[iuViewController alloc] initWithAddress:@"http://www.uniquerewards.com" del:NO];
+        
+        NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:@"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3", @"UserAgent", nil];
+        [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
+        
+        iuViewController* vc1 = [[iuViewController alloc] initWithAddress:@"http://www.uniquerewards.com" del:NO mail:NO];
+//        iuViewController* vc1 = [[iuViewController alloc] initWithAddress:@"http://www.twitter.com" del:NO];
         UINavigationController* nav1 = [[UINavigationController alloc] initWithRootViewController:vc1];
         //    nav1.navigationBar.hidden = YES;
         vc1.title = @"Main";
         
         [vc1 release]; vc1 = nil;
         
-        iuViewController* vc2 = [[iuViewController alloc] initWithAddress:@"http://gmail.com" del:NO];
+        vc2 = [[iuViewController alloc] initWithAddress:@"http://gmail.com" del:NO mail:YES];
         vc2.title = @"Mail";
         UINavigationController* nav2 = [[UINavigationController alloc] initWithRootViewController:vc2];
         //    nav2.navigationBar.hidden = YES;
-        [vc2 release]; vc2 = nil;
+        /*[vc2 release]; vc2 = nil;*/
         
         //    iuViewController* vc3 = [[iuViewController alloc] init];
         //    vc3.title = @"Scan";
@@ -92,7 +103,7 @@
     NSMutableArray* listOfViewControllers = [[NSMutableArray alloc] init];
     [listOfViewControllers addObjectsFromArray: self.tabBar.viewControllers];
     
-    iuViewController* vc3 = [[iuViewController alloc] initWithAddress:str del:YES];
+    iuViewController* vc3 = [[iuViewController alloc] initWithAddress:str del:YES mail:NO];
     vc3.title = title;//@"Offer";
     UINavigationController* nav3 = [[UINavigationController alloc] initWithRootViewController:vc3];
     nav3.navigationBar.hidden = NO;
@@ -114,6 +125,9 @@
 - (void)dealloc {
 
     self.tabBar = nil;
+    self.pemail = nil;
+    
+    [vc2 release]; vc2 = nil;
     
     [super dealloc];
 }

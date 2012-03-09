@@ -12,12 +12,14 @@
     
     BOOL firsttime;
     BOOL removeable;
+    BOOL pmail;
     UIBarButtonItem* bi;
 }
 
-- (id)initWithAddress:(NSString*)url del:(BOOL)del;
+- (id)initWithAddress:(NSString*)url del:(BOOL)del mail:(BOOL)mail;
 - (void)bck;
 - (void)del;
+- (void)refrMail;
 
 @property (nonatomic, retain) IBOutlet UIWebView* site;
 @property (nonatomic, retain) NSString* surl;

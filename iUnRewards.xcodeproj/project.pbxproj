@@ -24,6 +24,7 @@
 		DD830E3413F644C000B3389A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD830E3213F644C000B3389A /* InfoPlist.strings */; };
 		DD830E3613F644C000B3389A /* iuTests.h in Resources */ = {isa = PBXBuildFile; fileRef = DD830E3513F644C000B3389A /* iuTests.h */; };
 		DD830E3813F644C000B3389A /* iuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD830E3713F644C000B3389A /* iuTests.m */; };
+		DDEDBECC150AAFBD00926102 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DDEDBECB150AAFBD00926102 /* Settings.bundle */; };
 		F27C688E14D6BCAA0010DE6D /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = F27C688D14D6BCAA0010DE6D /* Entitlements.plist */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		DD830E3313F644C000B3389A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD830E3513F644C000B3389A /* iuTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iuTests.h; sourceTree = "<group>"; };
 		DD830E3713F644C000B3389A /* iuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iuTests.m; sourceTree = "<group>"; };
+		DDEDBECB150AAFBD00926102 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		F27C688D14D6BCAA0010DE6D /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 				DD830E1013F644BF00B3389A /* InfoPlist.strings */,
 				DD830E1313F644C000B3389A /* main.m */,
 				DD830E1513F644C000B3389A /* iUnRewards-Prefix.pch */,
+				DDEDBECB150AAFBD00926102 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				DD830E1B13F644C000B3389A /* MainWindow.xib in Resources */,
 				DD830E2113F644C000B3389A /* iuViewController.xib in Resources */,
 				F27C688E14D6BCAA0010DE6D /* Entitlements.plist in Resources */,
+				DDEDBECC150AAFBD00926102 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
