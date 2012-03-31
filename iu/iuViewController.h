@@ -23,5 +23,6 @@
 
 @property (nonatomic, retain) IBOutlet UIWebView* site;
 @property (nonatomic, retain) NSString* surl;
+@property (nonatomic, retain) IBOutlet UILabel* lab;
 
 @end

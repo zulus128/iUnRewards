@@ -14,6 +14,7 @@
 
 @synthesize tabBar;
 @synthesize pemail;
+@synthesize entered, rect;
 
 + (Common*) instance  {
 	

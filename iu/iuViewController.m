@@ -13,6 +13,7 @@
 
 @synthesize site;
 @synthesize surl;
+@synthesize lab;
 
 - (void)didReceiveMemoryWarning
 {
@@ -46,9 +47,34 @@
     [[Common instance] removeTab:self];
 }
 
-- (void)refrMail {
- 
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+
     if(pmail) {
+        
+        CGRect f = [[UIScreen mainScreen] bounds];
+        NSLog(@"width = %f", f.size.width);
+        int l = 50;
+        BOOL b = ((fromInterfaceOrientation == UIInterfaceOrientationPortrait) || (fromInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown));
+        
+//        site.frame = CGRectMake(f.origin.x, f.origin.y + l, f.size.width, f.size.height - l);
+        self.lab.frame = CGRectMake(0, 0, !b?f.size.width:f.size.height, l);
+      
+//        self.lab.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    self.lab.text = @"This is your e-mail account you've chosen by default on this device. To change your e-mail account, please go to 'Settings' - 'Apps' - 'UniqueRewards'.";
+        
+//        [self.lab performSelectorOnMainThread : @selector(setText:) withObject:@"This is your e-mail account you've chosen by default on this device. To change your e-mail account, please go to 'Settings' - 'Apps' - 'UniqueRewards'." waitUntilDone:YES];
+    }
+}
+
+- (void)refrMail {
+     
+    if(pmail) {
+        
+        CGRect f = [Common instance].rect;
+        int l = 50;
+        site.frame = CGRectMake(f.origin.x, f.origin.y + l, f.size.width, f.size.height - l);
+        self.lab.frame = CGRectMake(0, 0, f.size.width, l);
+        
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
         [Common instance].pemail = [prefs stringForKey:@"email"];
         if(([Common instance].pemail == nil) || ([[Common instance].pemail isEqualToString:@""]))
@@ -62,6 +88,16 @@
         NSURL *url = [NSURL URLWithString:[Common instance].pemail];
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
         [self.site loadRequest:requestObj];
+    }
+    else {
+        
+        if([Common instance].entered)
+            site.frame = [Common instance].rect;
+        else {
+            [Common instance].rect = site.frame;
+            [Common instance].entered = YES;
+        }
+        
     }
 }
 
