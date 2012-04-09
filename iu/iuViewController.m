@@ -122,6 +122,8 @@
     UIToolbar* toolbar = [[UIToolbar alloc]
                           initWithFrame:CGRectMake(0, 0, 200, 35)];
     [toolbar setBarStyle: UIBarStyleDefault];
+    if (toolbar.subviews.count > 0)
+        [[[toolbar subviews] objectAtIndex:0] removeFromSuperview];
     
     // create an array for the buttons
     NSMutableArray* buttons = [[NSMutableArray alloc] initWithCapacity:5];
