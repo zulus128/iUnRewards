@@ -117,14 +117,16 @@
     
 //    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:uibarbuttonInstance1, uibarbuttonInstance2, nil];
 
-//    UIToolbar* toolbar = [[UIToolbar alloc]
-//                          initWithFrame:CGRectMake(0, 0, 320, 45)];
-//    [toolbar setBarStyle: UIBarStyleBlackOpaque];
-//    
-//    // create an array for the buttons
-//    NSMutableArray* buttons = [[NSMutableArray alloc] initWithCapacity:5];
-//    
-//    // create a standard save button
+    NSLog(@"==== %f", [[UIScreen mainScreen] bounds].size.height - self.navigationController.view.frame.size.height);
+    
+    UIToolbar* toolbar = [[UIToolbar alloc]
+                          initWithFrame:CGRectMake(0, 0, 200, 35)];
+    [toolbar setBarStyle: UIBarStyleDefault];
+    
+    // create an array for the buttons
+    NSMutableArray* buttons = [[NSMutableArray alloc] initWithCapacity:5];
+    
+    // create a standard save button
 //    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
 //                                   initWithBarButtonSystemItem:UIBarButtonSystemItemSave
 //                                   target:self
@@ -132,8 +134,36 @@
 //    saveButton.style = UIBarButtonItemStyleBordered;
 //    [buttons addObject:saveButton];
 //    [saveButton release];
-//    
-//    // create a standard delete button with the trash icon
+    
+    
+    
+    
+    
+    UIButton *a1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [a1 setFrame:CGRectMake(0.0f, 0.0f, 38.0f, 31.0f)];
+    [a1 addTarget:self action:@selector(bck) forControlEvents:UIControlEventTouchUpInside];
+    [a1 setImage:[UIImage imageNamed:@"left.png"] forState:UIControlStateNormal];
+    UIBarButtonItem *r1 = [[UIBarButtonItem alloc] initWithCustomView:a1];
+    [buttons addObject:r1];
+    [r1 release];
+    
+    UIButton *a2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [a2 setFrame:CGRectMake(00.0f, 0.0f, 38.0f, 31.0f)];
+    [a2 addTarget:self action:@selector(bck) forControlEvents:UIControlEventTouchUpInside];
+    [a2 setImage:[UIImage imageNamed:@"right.png"] forState:UIControlStateNormal];
+    UIBarButtonItem *r2 = [[UIBarButtonItem alloc] initWithCustomView:a2];
+    [buttons addObject:r2];
+    [r2 release];
+    
+    UIButton *a3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [a3 setFrame:CGRectMake(60.0f, 0.0f, 38.0f, 31.0f)];
+    [a3 addTarget:self action:@selector(bck) forControlEvents:UIControlEventTouchUpInside];
+    [a3 setImage:[UIImage imageNamed:@"refresh.png"] forState:UIControlStateNormal];
+    UIBarButtonItem *r3 = [[UIBarButtonItem alloc] initWithCustomView:a3];
+    [buttons addObject:r3];
+    [r3 release];
+    
+    // create a standard delete button with the trash icon
 //    UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc]
 //                                     initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
 //                                     target:self
@@ -165,15 +195,17 @@
 //    doneButton.style = UIBarButtonItemStyleBordered;
 //    [buttons addObject:doneButton];
 //    [doneButton release];
-//    
-//    // put the buttons in the toolbar and release them
-//    [toolbar setItems:buttons animated:NO];
-//    [buttons release];
+    
+    // put the buttons in the toolbar and release them
+    [toolbar setItems:buttons animated:NO];
+    [buttons release];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:toolbar];
+    [toolbar release];
     
     
-    
-    bi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(bck)];
-    self.navigationItem.leftBarButtonItem = bi; 
+//    bi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(bck)];
+//    self.navigationItem.leftBarButtonItem = bi; 
 
     if (removeable) {
         

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36091DF015330E4500E58CE8 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 36091DED15330E4500E58CE8 /* left.png */; };
+		36091DF115330E4500E58CE8 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 36091DEE15330E4500E58CE8 /* refresh.png */; };
+		36091DF215330E4500E58CE8 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 36091DEF15330E4500E58CE8 /* right.png */; };
 		DD3E17F114813AF900CC7468 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3E17F014813AF900CC7468 /* Common.m */; };
 		DD7591AA15269E820032A9BA /* 72.png in Resources */ = {isa = PBXBuildFile; fileRef = DD7591A915269E820032A9BA /* 72.png */; };
 		DD830E0813F644BF00B3389A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD830E0713F644BF00B3389A /* UIKit.framework */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36091DED15330E4500E58CE8 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		36091DEE15330E4500E58CE8 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		36091DEF15330E4500E58CE8 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
 		DD3E17EF14813AF900CC7468 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		DD3E17F014813AF900CC7468 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		DD7591A915269E820032A9BA /* 72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 72.png; sourceTree = "<group>"; };
@@ -102,6 +108,9 @@
 				DDB9EB9615269F1D006420FD /* 114.png */,
 				DDB9EB9315269F17006420FD /* 57.png */,
 				DD7591A915269E820032A9BA /* 72.png */,
+				36091DED15330E4500E58CE8 /* left.png */,
+				36091DEE15330E4500E58CE8 /* refresh.png */,
+				36091DEF15330E4500E58CE8 /* right.png */,
 				DD830E0D13F644BF00B3389A /* iu */,
 				DD830E2F13F644C000B3389A /* iuTests */,
 				DD830E0613F644BF00B3389A /* Frameworks */,
@@ -252,6 +261,9 @@
 				DD7591AA15269E820032A9BA /* 72.png in Resources */,
 				DDB9EB9415269F17006420FD /* 57.png in Resources */,
 				DDB9EB9715269F1D006420FD /* 114.png in Resources */,
+				36091DF015330E4500E58CE8 /* left.png in Resources */,
+				36091DF115330E4500E58CE8 /* refresh.png in Resources */,
+				36091DF215330E4500E58CE8 /* right.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,8 +381,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PROVISIONING_PROFILE = "25F23AD6-A23B-4538-BDF5-CEA8D5D731FC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5E92E61F-2C65-44D1-B812-CFC43AF471C4";
+				PROVISIONING_PROFILE = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -391,8 +403,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "25F23AD6-A23B-4538-BDF5-CEA8D5D731FC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "25F23AD6-A23B-4538-BDF5-CEA8D5D731FC";
+				PROVISIONING_PROFILE = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -408,8 +420,8 @@
 				GCC_PREFIX_HEADER = "iu/iUnRewards-Prefix.pch";
 				INFOPLIST_FILE = "iu/iUnRewards-Info.plist";
 				PRODUCT_NAME = iUnRewards;
-				PROVISIONING_PROFILE = "25F23AD6-A23B-4538-BDF5-CEA8D5D731FC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "25F23AD6-A23B-4538-BDF5-CEA8D5D731FC";
+				PROVISIONING_PROFILE = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -418,11 +430,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: VADIM KASSIN (744XFE3JS8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: VADIM KASSIN (744XFE3JS8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iu/iUnRewards-Prefix.pch";
 				INFOPLIST_FILE = "iu/iUnRewards-Info.plist";
 				PRODUCT_NAME = iUnRewards;
-				PROVISIONING_PROFILE = "25F23AD6-A23B-4538-BDF5-CEA8D5D731FC";
+				PROVISIONING_PROFILE = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
