@@ -13,11 +13,16 @@
     BOOL firsttime;
     BOOL removeable;
     BOOL pmail;
-    UIBarButtonItem* bi;
+//    UIBarButtonItem* bi;
+    UIBarButtonItem *r1;
+    UIBarButtonItem *r2;
+    UIBarButtonItem *r3;
 }
 
 - (id)initWithAddress:(NSString*)url del:(BOOL)del mail:(BOOL)mail;
 - (void)bck;
+- (void)fwd;
+- (void)rfr;
 - (void)del;
 - (void)refrMail;
 

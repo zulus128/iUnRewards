@@ -32,7 +32,7 @@
 
 @property (nonatomic, retain) UITabBarController* tabBar;
 @property (nonatomic, retain) NSString* pemail;
-@property (readwrite, assign) BOOL entered;
+//@property (readwrite, assign) BOOL entered;
 @property (readwrite, assign) CGRect rect;
 
 @end

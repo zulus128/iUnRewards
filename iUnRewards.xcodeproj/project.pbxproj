@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36091DF015330E4500E58CE8 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 36091DED15330E4500E58CE8 /* left.png */; };
+		36091DF015330E4500E58CE8 /* lef.png in Resources */ = {isa = PBXBuildFile; fileRef = 36091DED15330E4500E58CE8 /* lef.png */; };
 		36091DF115330E4500E58CE8 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 36091DEE15330E4500E58CE8 /* refresh.png */; };
 		36091DF215330E4500E58CE8 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 36091DEF15330E4500E58CE8 /* right.png */; };
 		DD3E17F114813AF900CC7468 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3E17F014813AF900CC7468 /* Common.m */; };
@@ -45,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36091DED15330E4500E58CE8 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		36091DED15330E4500E58CE8 /* lef.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lef.png; sourceTree = "<group>"; };
 		36091DEE15330E4500E58CE8 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		36091DEF15330E4500E58CE8 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
 		DD3E17EF14813AF900CC7468 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 				DDB9EB9615269F1D006420FD /* 114.png */,
 				DDB9EB9315269F17006420FD /* 57.png */,
 				DD7591A915269E820032A9BA /* 72.png */,
-				36091DED15330E4500E58CE8 /* left.png */,
+				36091DED15330E4500E58CE8 /* lef.png */,
 				36091DEE15330E4500E58CE8 /* refresh.png */,
 				36091DEF15330E4500E58CE8 /* right.png */,
 				DD830E0D13F644BF00B3389A /* iu */,
@@ -261,7 +261,7 @@
 				DD7591AA15269E820032A9BA /* 72.png in Resources */,
 				DDB9EB9415269F17006420FD /* 57.png in Resources */,
 				DDB9EB9715269F1D006420FD /* 114.png in Resources */,
-				36091DF015330E4500E58CE8 /* left.png in Resources */,
+				36091DF015330E4500E58CE8 /* lef.png in Resources */,
 				36091DF115330E4500E58CE8 /* refresh.png in Resources */,
 				36091DF215330E4500E58CE8 /* right.png in Resources */,
 			);

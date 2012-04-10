@@ -9,6 +9,8 @@
 #import "iuViewController.h"
 #import "Common.h"
 
+#define labheight 50
+
 @implementation iuViewController
 
 @synthesize site;
@@ -39,7 +41,20 @@
 
 - (void)bck {
     
+    NSLog(@"back");
     [self.site goBack];
+}
+
+- (void)fwd {
+    
+    NSLog(@"forward");
+    [self.site goForward];
+}
+
+- (void)rfr {
+    
+    NSLog(@"reload");
+    [self.site reload];
 }
 
 - (void)del {
@@ -47,33 +62,78 @@
     [[Common instance] removeTab:self];
 }
 
+-(CGSize) sizeInOrientation:(UIInterfaceOrientation)orientation
+{
+
+//    float tbh = tabViewController.tabBar.frame.size.height;
+    
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    UIApplication *application = [UIApplication sharedApplication];
+    if (UIInterfaceOrientationIsLandscape(orientation))
+    {
+        size = CGSizeMake(size.height, size.width);
+    }
+    if (application.statusBarHidden == NO)
+    {
+        size.height -= MIN(application.statusBarFrame.size.width, application.statusBarFrame.size.height);
+    }
+
+    return size;
+}
+
+//- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
 
-    if(pmail) {
+
+    
+    
+//    CGRect frame = [UIScreen mainScreen].applicationFrame;
+//    CGSize size = [self sizeInOrientation:self.interfaceOrientation];//frame.size;
+//    NSLog(@"%@", [NSString stringWithFormat:@"Rotation: %s [w=%f, h=%f]",  
+//                  UIInterfaceOrientationIsPortrait(self.interfaceOrientation) ? "Portrait" : "Landscape",
+//                  size.width, size.height]);
+
+    CGSize s = [self sizeInOrientation:self.interfaceOrientation];
+    
+    
+    if(!pmail) {
+    
+        CGRect f = CGRectMake(0, 0, s.width, s.height);
+        self.site.frame = f;
+
+    }
+    else {
+
+        CGRect f = CGRectMake(0, labheight, s.width, s.height - labheight);
+        self.site.frame = f;
+
+        self.lab.frame = CGRectMake(0, 0, s.width, labheight);
+
+//        CGRect f = [[UIScreen mainScreen] bounds];
+//        NSLog(@"width = %f", f.size.width);
+//        int l = 50;
+//        BOOL b = ((fromInterfaceOrientation == UIInterfaceOrientationPortrait) || (fromInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown));
         
-        CGRect f = [[UIScreen mainScreen] bounds];
-        NSLog(@"width = %f", f.size.width);
-        int l = 50;
-        BOOL b = ((fromInterfaceOrientation == UIInterfaceOrientationPortrait) || (fromInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown));
-        
-//        site.frame = CGRectMake(f.origin.x, f.origin.y + l, f.size.width, f.size.height - l);
-        self.lab.frame = CGRectMake(0, 0, !b?f.size.width:f.size.height, l);
+//        self.lab.frame = CGRectMake(0, 0, !b?f.size.width:f.size.height, l);
       
-//        self.lab.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        
+        
     self.lab.text = @"This is your e-mail account you've chosen by default on this device. To change your e-mail account, please go to 'Settings' - 'Apps' - 'UniqueRewards'.";
         
-//        [self.lab performSelectorOnMainThread : @selector(setText:) withObject:@"This is your e-mail account you've chosen by default on this device. To change your e-mail account, please go to 'Settings' - 'Apps' - 'UniqueRewards'." waitUntilDone:YES];
     }
 }
 
 - (void)refrMail {
      
+    [self didRotateFromInterfaceOrientation:0];
+    
     if(pmail) {
         
-        CGRect f = [Common instance].rect;
-        int l = 50;
-        site.frame = CGRectMake(f.origin.x, f.origin.y + l, f.size.width, f.size.height - l);
-        self.lab.frame = CGRectMake(0, 0, f.size.width, l);
+        
+//        CGRect f = [Common instance].rect;
+//        int l = 50;
+//        site.frame = CGRectMake(f.origin.x, f.origin.y + l, f.size.width, f.size.height - l);
+//        self.lab.frame = CGRectMake(0, 0, f.size.width, l);
         
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
         [Common instance].pemail = [prefs stringForKey:@"email"];
@@ -91,12 +151,12 @@
     }
     else {
         
-        if([Common instance].entered)
-            site.frame = [Common instance].rect;
-        else {
-            [Common instance].rect = site.frame;
-            [Common instance].entered = YES;
-        }
+//        if([Common instance].entered)
+//            site.frame = [Common instance].rect;
+//        else {
+//            [Common instance].rect = site.frame;
+//            [Common instance].entered = YES;
+//        }
         
     }
 }
@@ -117,7 +177,7 @@
     
 //    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:uibarbuttonInstance1, uibarbuttonInstance2, nil];
 
-    NSLog(@"==== %f", [[UIScreen mainScreen] bounds].size.height - self.navigationController.view.frame.size.height);
+//    NSLog(@"==== %f", [[UIScreen mainScreen] bounds].size.height - self.navigationController.view.frame.size.height);
     
     UIToolbar* toolbar = [[UIToolbar alloc]
                           initWithFrame:CGRectMake(0, 0, 200, 35)];
@@ -142,26 +202,26 @@
     
     
     UIButton *a1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [a1 setFrame:CGRectMake(0.0f, 0.0f, 38.0f, 31.0f)];
+    [a1 setFrame:CGRectMake(0.0f, 0.0f, 30.0f, 26.0f)];
     [a1 addTarget:self action:@selector(bck) forControlEvents:UIControlEventTouchUpInside];
-    [a1 setImage:[UIImage imageNamed:@"left.png"] forState:UIControlStateNormal];
-    UIBarButtonItem *r1 = [[UIBarButtonItem alloc] initWithCustomView:a1];
+    [a1 setImage:[UIImage imageNamed:@"lef.png"] forState:UIControlStateNormal];
+    r1 = [[UIBarButtonItem alloc] initWithCustomView:a1];
     [buttons addObject:r1];
     [r1 release];
     
     UIButton *a2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [a2 setFrame:CGRectMake(00.0f, 0.0f, 38.0f, 31.0f)];
-    [a2 addTarget:self action:@selector(bck) forControlEvents:UIControlEventTouchUpInside];
+    [a2 setFrame:CGRectMake(0.0f, 0.0f, 30.0f, 26.0f)];
+    [a2 addTarget:self action:@selector(fwd) forControlEvents:UIControlEventTouchUpInside];
     [a2 setImage:[UIImage imageNamed:@"right.png"] forState:UIControlStateNormal];
-    UIBarButtonItem *r2 = [[UIBarButtonItem alloc] initWithCustomView:a2];
+    r2 = [[UIBarButtonItem alloc] initWithCustomView:a2];
     [buttons addObject:r2];
     [r2 release];
     
     UIButton *a3 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [a3 setFrame:CGRectMake(60.0f, 0.0f, 38.0f, 31.0f)];
-    [a3 addTarget:self action:@selector(bck) forControlEvents:UIControlEventTouchUpInside];
+    [a3 setFrame:CGRectMake(0.0f, 0.0f, 33.0f, 26.0f)];
+    [a3 addTarget:self action:@selector(rfr) forControlEvents:UIControlEventTouchUpInside];
     [a3 setImage:[UIImage imageNamed:@"refresh.png"] forState:UIControlStateNormal];
-    UIBarButtonItem *r3 = [[UIBarButtonItem alloc] initWithCustomView:a3];
+    r3 = [[UIBarButtonItem alloc] initWithCustomView:a3];
     [buttons addObject:r3];
     [r3 release];
     
@@ -199,7 +259,7 @@
 //    [doneButton release];
     
     // put the buttons in the toolbar and release them
-    [toolbar setItems:buttons animated:NO];
+    [toolbar setItems:buttons animated:YES];
     [buttons release];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:toolbar];
@@ -224,14 +284,20 @@
     [self.site loadRequest:requestObj];
     }
     
-    [bi setEnabled:self.site.canGoBack];
+//    [bi setEnabled:self.site.canGoBack];
+    
+    [r1  setEnabled:self.site.canGoBack];
+    [r2  setEnabled:self.site.canGoForward];
     
     [super viewDidLoad];
 }
 
 - (void)dealloc {
     
-    [bi release];
+//    [bi release];
+    [r1 release];
+    [r2 release];
+    [r3 release];
 
     [super dealloc];
     
@@ -254,7 +320,10 @@
     
     NSLog(@"finishLoad");
     
-    [bi setEnabled:self.site.canGoBack];
+    //    [bi setEnabled:self.site.canGoBack];
+    
+    [r1  setEnabled:self.site.canGoBack];
+    [r2  setEnabled:self.site.canGoForward];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
