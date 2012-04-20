@@ -108,11 +108,13 @@
     
     
     int g = 0;
+    BOOL found = NO;
     iuViewController* cc = nil;
 
     if([title isEqualToString:CLICK_CASH]) {
 
-        ccurl = str;
+        self.ccurl = str;
+        found = YES;
 
         for (UINavigationController* i in listOfViewControllers) {
         
@@ -135,7 +137,7 @@
         return;
     }
     
-    iuViewController* vc3 = [[iuViewController alloc] initWithAddress:str del:YES mail:NO clickcash:(cc != nil)];
+    iuViewController* vc3 = [[iuViewController alloc] initWithAddress:str del:YES mail:NO clickcash:found];
     vc3.title = title;//@"Offer";
     UINavigationController* nav3 = [[UINavigationController alloc] initWithRootViewController:vc3];
     nav3.navigationBar.hidden = NO;
