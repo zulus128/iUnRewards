@@ -16,6 +16,7 @@
 @synthesize pemail;
 //@synthesize entered;
 @synthesize rect;
+@synthesize ccurl;
 
 + (Common*) instance  {
 	
@@ -45,7 +46,7 @@
         NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:@"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3", @"UserAgent", nil];
         [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
         
-        iuViewController* vc1 = [[iuViewController alloc] initWithAddress:@"http://www.uniquerewards.com" del:NO mail:NO];
+        iuViewController* vc1 = [[iuViewController alloc] initWithAddress:@"http://www.uniquerewards.com" del:NO mail:NO clickcash:NO];
 //        iuViewController* vc1 = [[iuViewController alloc] initWithAddress:@"http://www.twitter.com" del:NO];
         UINavigationController* nav1 = [[UINavigationController alloc] initWithRootViewController:vc1];
         //    nav1.navigationBar.hidden = YES;
@@ -53,7 +54,7 @@
         
         [vc1 release]; vc1 = nil;
         
-        vc2 = [[iuViewController alloc] initWithAddress:@"http://gmail.com" del:NO mail:YES];
+        vc2 = [[iuViewController alloc] initWithAddress:@"http://gmail.com" del:NO mail:YES clickcash:NO];
         vc2.title = @"Mail";
         UINavigationController* nav2 = [[UINavigationController alloc] initWithRootViewController:vc2];
         //    nav2.navigationBar.hidden = YES;
@@ -105,7 +106,36 @@
     NSMutableArray* listOfViewControllers = [[NSMutableArray alloc] init];
     [listOfViewControllers addObjectsFromArray: self.tabBar.viewControllers];
     
-    iuViewController* vc3 = [[iuViewController alloc] initWithAddress:str del:YES mail:NO];
+    
+    int g = 0;
+    iuViewController* cc = nil;
+
+    if([title isEqualToString:CLICK_CASH]) {
+
+        ccurl = str;
+
+        for (UINavigationController* i in listOfViewControllers) {
+        
+        
+            if (i.title == CLICK_CASH) {
+                
+                NSLog(@"found click cash");
+                cc = (iuViewController*)i;
+                break;
+            }
+            g++;
+        }
+        
+    }
+    
+    if (cc != nil) {
+        
+//        [cc goAddress:str];
+        self.tabBar.selectedIndex = g;
+        return;
+    }
+    
+    iuViewController* vc3 = [[iuViewController alloc] initWithAddress:str del:YES mail:NO clickcash:(cc != nil)];
     vc3.title = title;//@"Offer";
     UINavigationController* nav3 = [[UINavigationController alloc] initWithRootViewController:vc3];
     nav3.navigationBar.hidden = NO;

@@ -27,13 +27,14 @@
 
 #pragma mark - View lifecycle
 
-- (id)initWithAddress:(NSString*)url  del:(BOOL)del mail:(BOOL)mail{
+- (id)initWithAddress:(NSString*)url  del:(BOOL)del mail:(BOOL)mail clickcash:(BOOL)clickcash {
     
     if (self = [super init]) {
         
         self.surl = url;
         removeable = del;
         pmail = mail;
+        pclick = clickcash;
     }
     
 	return self;
@@ -126,6 +127,8 @@
 - (void)refrMail {
      
     [self didRotateFromInterfaceOrientation:0];
+
+//    [self.site stopLoading];
     
     if(pmail) {
         
@@ -149,17 +152,26 @@
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
         [self.site loadRequest:requestObj];
     }
-    else {
-        
-//        if([Common instance].entered)
-//            site.frame = [Common instance].rect;
-//        else {
-//            [Common instance].rect = site.frame;
-//            [Common instance].entered = YES;
-//        }
+
+    if(pclick) {
+
+        [self.site stopLoading];
+        NSURL *url = [NSURL URLWithString:[Common instance].ccurl];
+        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+        [self.site loadRequest:requestObj];
+
         
     }
 }
+
+//- (void)goAddress:(NSString*)str {
+//    
+//    NSURL *url = [NSURL URLWithString:str];
+//    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+//    [self.site loadRequest:requestObj];
+//    return;
+//
+//}
 
 - (void)viewWillAppear:(BOOL)animated {
     
@@ -351,8 +363,14 @@
 
     NSLog(@"Loading %@", [request.URL absoluteString]);
     
-    if ( [[request.URL absoluteString] hasPrefix:TEST_STRING]||
-            [[request.URL absoluteString] hasPrefix:TEST_STRING1]
+    if ( [[request.URL absoluteString] hasPrefix:TEST_STRING1]
+        )    {
+        
+        [[Common instance] addTab:[request.URL absoluteString]title:CLICK_CASH];
+        return NO;
+    }
+    if ( [[request.URL absoluteString] hasPrefix:TEST_STRING]/*||
+            [[request.URL absoluteString] hasPrefix:TEST_STRING1]*/
         )    {
         
         [[Common instance] addTab:[request.URL absoluteString]title:@"Offer"];
