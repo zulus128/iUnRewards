@@ -26,7 +26,7 @@
 - (void)rfr;
 - (void)del;
 - (void)refrMail;
-//- (void)goAddress:(NSString*)str;
+- (void)goAddress:(NSString*)str;
 
 @property (nonatomic, retain) IBOutlet UIWebView* site;
 @property (nonatomic, retain) NSString* surl;

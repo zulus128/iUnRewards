@@ -153,25 +153,31 @@
         [self.site loadRequest:requestObj];
     }
 
-    if(pclick) {
-
-        [self.site stopLoading];
-        NSURL *url = [NSURL URLWithString:[Common instance].ccurl];
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-        [self.site loadRequest:requestObj];
-
-        
-    }
+//    if(pclick) {
+//
+//        [self.site stopLoading];
+//        NSURL *url = [NSURL URLWithString:[Common instance].ccurl];
+//        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+//        [self.site loadRequest:requestObj];
+//
+//        
+//    }
 }
 
-//- (void)goAddress:(NSString*)str {
-//    
-//    NSURL *url = [NSURL URLWithString:str];
-//    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-//    [self.site loadRequest:requestObj];
-//    return;
-//
-//}
+- (void)goAddress:(NSString*)str {
+    
+    firsttime = YES;
+    
+    NSURL *url = [NSURL URLWithString:@"about:blank"];
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    [self.site loadRequest:requestObj];
+
+    url = [NSURL URLWithString:str];
+    requestObj = [NSURLRequest requestWithURL:url];
+    [self.site loadRequest:requestObj];
+    return;
+
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     
@@ -355,6 +361,9 @@
     }
     */
 
+    if([[request.URL absoluteString] isEqualToString:@"about:blank"])
+        return YES;
+    
     if(firsttime) {
         
         firsttime = NO;

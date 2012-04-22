@@ -122,7 +122,7 @@
             if (i.title == CLICK_CASH) {
                 
                 NSLog(@"found click cash");
-                cc = (iuViewController*)i;
+                cc = (iuViewController*) [i topViewController];
                 break;
             }
             g++;
@@ -132,7 +132,12 @@
     
     if (cc != nil) {
         
-//        [cc goAddress:str];
+        [cc goAddress:str];
+        
+//        NSURL *url = [NSURL URLWithString:str];
+//        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+//        [self.site loadRequest:requestObj];
+        
         self.tabBar.selectedIndex = g;
         return;
     }
