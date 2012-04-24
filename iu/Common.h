@@ -19,6 +19,7 @@
 #define TEST_STRING4 @"http://twitter.com/uniquerewards"
 #define TEST_STRING5 @"http://www.facebook.com/uniquerewards"
 #define TEST_STRING6 @"https://www.facebook.com/connect"
+#define TEST_STRING7 @"http://www.uniquerewards.com/cgi-bin/main.cgi?cmd=rp_click"
 
 #define CLICK_CASH @"Click Cash Offers"
 

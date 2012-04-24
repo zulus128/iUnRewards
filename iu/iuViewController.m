@@ -378,8 +378,8 @@
         [[Common instance] addTab:[request.URL absoluteString]title:CLICK_CASH];
         return NO;
     }
-    if ( [[request.URL absoluteString] hasPrefix:TEST_STRING]/*||
-            [[request.URL absoluteString] hasPrefix:TEST_STRING1]*/
+    if ( [[request.URL absoluteString] hasPrefix:TEST_STRING]||
+            [[request.URL absoluteString] hasPrefix:TEST_STRING7]
         )    {
         
         [[Common instance] addTab:[request.URL absoluteString]title:@"Offer"];
