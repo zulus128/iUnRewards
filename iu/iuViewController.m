@@ -223,6 +223,7 @@
     [a1 setFrame:CGRectMake(0.0f, 0.0f, 30.0f, 26.0f)];
     [a1 addTarget:self action:@selector(bck) forControlEvents:UIControlEventTouchUpInside];
     [a1 setImage:[UIImage imageNamed:@"lef.png"] forState:UIControlStateNormal];
+    [a1 setImage:[UIImage imageNamed:@"left-arrow.png"] forState:UIControlStateNormal];
     r1 = [[UIBarButtonItem alloc] initWithCustomView:a1];
     [buttons addObject:r1];
     [r1 release];
@@ -230,7 +231,7 @@
     UIButton *a2 = [UIButton buttonWithType:UIButtonTypeCustom];
     [a2 setFrame:CGRectMake(0.0f, 0.0f, 30.0f, 26.0f)];
     [a2 addTarget:self action:@selector(fwd) forControlEvents:UIControlEventTouchUpInside];
-    [a2 setImage:[UIImage imageNamed:@"right.png"] forState:UIControlStateNormal];
+    [a2 setImage:[UIImage imageNamed:@"right-arrow.png"] forState:UIControlStateNormal];
     r2 = [[UIBarButtonItem alloc] initWithCustomView:a2];
     [buttons addObject:r2];
     [r2 release];
