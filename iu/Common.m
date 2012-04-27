@@ -133,6 +133,7 @@
     vc3.title = title;//@"Offer";
     UINavigationController* nav3 = [[UINavigationController alloc] initWithRootViewController:vc3];
     nav3.navigationBar.hidden = NO;
+    nav3.tabBarItem.image = [UIImage imageNamed:@"172-pricetag.png"]; 
 
     [listOfViewControllers addObject:nav3];
 
