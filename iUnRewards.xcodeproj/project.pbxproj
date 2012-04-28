@@ -27,9 +27,9 @@
 		36585534154906AB0038C9B9 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3658552E154906AB0038C9B9 /* mail.png */; };
 		36585535154906AB0038C9B9 /* mail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3658552F154906AB0038C9B9 /* mail@2x.png */; };
 		36585536154906AB0038C9B9 /* right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 36585530154906AB0038C9B9 /* right-arrow.png */; };
-		366E8FEF154AC6D700CBA64B /* 144-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 366E8FEE154AC6D700CBA64B /* 144-144.png */; };
+		366E8FEF154AC6D700CBA64B /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 366E8FEE154AC6D700CBA64B /* Icon-144.png */; };
 		DD3E17F114813AF900CC7468 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3E17F014813AF900CC7468 /* Common.m */; };
-		DD7591AA15269E820032A9BA /* 72.png in Resources */ = {isa = PBXBuildFile; fileRef = DD7591A915269E820032A9BA /* 72.png */; };
+		DD7591AA15269E820032A9BA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = DD7591A915269E820032A9BA /* Icon-72.png */; };
 		DD830E0813F644BF00B3389A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD830E0713F644BF00B3389A /* UIKit.framework */; };
 		DD830E0A13F644BF00B3389A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD830E0913F644BF00B3389A /* Foundation.framework */; };
 		DD830E0C13F644BF00B3389A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD830E0B13F644BF00B3389A /* CoreGraphics.framework */; };
@@ -46,8 +46,8 @@
 		DD830E3413F644C000B3389A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD830E3213F644C000B3389A /* InfoPlist.strings */; };
 		DD830E3613F644C000B3389A /* iuTests.h in Resources */ = {isa = PBXBuildFile; fileRef = DD830E3513F644C000B3389A /* iuTests.h */; };
 		DD830E3813F644C000B3389A /* iuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD830E3713F644C000B3389A /* iuTests.m */; };
-		DDB9EB9415269F17006420FD /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB9EB9315269F17006420FD /* 57.png */; };
-		DDB9EB9715269F1D006420FD /* 114.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB9EB9615269F1D006420FD /* 114.png */; };
+		DDB9EB9415269F17006420FD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB9EB9315269F17006420FD /* Icon.png */; };
+		DDB9EB9715269F1D006420FD /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB9EB9615269F1D006420FD /* Icon-114.png */; };
 		DDEDBECC150AAFBD00926102 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DDEDBECB150AAFBD00926102 /* Settings.bundle */; };
 		F27C688E14D6BCAA0010DE6D /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = F27C688D14D6BCAA0010DE6D /* Entitlements.plist */; };
 /* End PBXBuildFile section */
@@ -83,10 +83,11 @@
 		3658552E154906AB0038C9B9 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
 		3658552F154906AB0038C9B9 /* mail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail@2x.png"; sourceTree = "<group>"; };
 		36585530154906AB0038C9B9 /* right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-arrow.png"; sourceTree = "<group>"; };
-		366E8FEE154AC6D700CBA64B /* 144-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "144-144.png"; sourceTree = "<group>"; };
+		366ACFD0154BD064008CD1EA /* iUnRewards.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iUnRewards.entitlements; sourceTree = "<group>"; };
+		366E8FEE154AC6D700CBA64B /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-144.png"; sourceTree = "<group>"; };
 		DD3E17EF14813AF900CC7468 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		DD3E17F014813AF900CC7468 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
-		DD7591A915269E820032A9BA /* 72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 72.png; sourceTree = "<group>"; };
+		DD7591A915269E820032A9BA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		DD830E0313F644BF00B3389A /* iUnRewards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iUnRewards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD830E0713F644BF00B3389A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DD830E0913F644BF00B3389A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,8 +108,8 @@
 		DD830E3313F644C000B3389A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD830E3513F644C000B3389A /* iuTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iuTests.h; sourceTree = "<group>"; };
 		DD830E3713F644C000B3389A /* iuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iuTests.m; sourceTree = "<group>"; };
-		DDB9EB9315269F17006420FD /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57.png; sourceTree = "<group>"; };
-		DDB9EB9615269F1D006420FD /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114.png; sourceTree = "<group>"; };
+		DDB9EB9315269F17006420FD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		DDB9EB9615269F1D006420FD /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
 		DDEDBECB150AAFBD00926102 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		F27C688D14D6BCAA0010DE6D /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,7 +142,8 @@
 		DD830DF813F644BE00B3389A = {
 			isa = PBXGroup;
 			children = (
-				366E8FEE154AC6D700CBA64B /* 144-144.png */,
+				366ACFD0154BD064008CD1EA /* iUnRewards.entitlements */,
+				366E8FEE154AC6D700CBA64B /* Icon-144.png */,
 				362F5B36154ABE1500FC91D6 /* Default-Landscape@2x~ipad.png */,
 				362F5B33154ABDFE00FC91D6 /* Default-Landscape~ipad.png */,
 				362F5B31154ABDF100FC91D6 /* Default-Portrait~ipad.png */,
@@ -151,9 +153,9 @@
 				363D961C154962DD0031CA49 /* left-arrow@2x.png */,
 				363D961D154962DD0031CA49 /* refresh@2x.png */,
 				363D961E154962DD0031CA49 /* right-arrow@2x.png */,
-				DDB9EB9615269F1D006420FD /* 114.png */,
-				DDB9EB9315269F17006420FD /* 57.png */,
-				DD7591A915269E820032A9BA /* 72.png */,
+				DDB9EB9615269F1D006420FD /* Icon-114.png */,
+				DDB9EB9315269F17006420FD /* Icon.png */,
+				DD7591A915269E820032A9BA /* Icon-72.png */,
 				36091DED15330E4500E58CE8 /* lef.png */,
 				36091DEE15330E4500E58CE8 /* refresh.png */,
 				36091DEF15330E4500E58CE8 /* right.png */,
@@ -312,9 +314,9 @@
 				DD830E2113F644C000B3389A /* iuViewController.xib in Resources */,
 				F27C688E14D6BCAA0010DE6D /* Entitlements.plist in Resources */,
 				DDEDBECC150AAFBD00926102 /* Settings.bundle in Resources */,
-				DD7591AA15269E820032A9BA /* 72.png in Resources */,
-				DDB9EB9415269F17006420FD /* 57.png in Resources */,
-				DDB9EB9715269F1D006420FD /* 114.png in Resources */,
+				DD7591AA15269E820032A9BA /* Icon-72.png in Resources */,
+				DDB9EB9415269F17006420FD /* Icon.png in Resources */,
+				DDB9EB9715269F1D006420FD /* Icon-114.png in Resources */,
 				36091DF015330E4500E58CE8 /* lef.png in Resources */,
 				36091DF115330E4500E58CE8 /* refresh.png in Resources */,
 				36091DF215330E4500E58CE8 /* right.png in Resources */,
@@ -335,7 +337,7 @@
 				362F5B34154ABDFE00FC91D6 /* Default-Landscape~ipad.png in Resources */,
 				362F5B35154ABE0A00FC91D6 /* Default-Portrait@2x~ipad.png in Resources */,
 				362F5B37154ABE1500FC91D6 /* Default-Landscape@2x~ipad.png in Resources */,
-				366E8FEF154AC6D700CBA64B /* 144-144.png in Resources */,
+				366E8FEF154AC6D700CBA64B /* Icon-144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,8 +439,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: VADIM KASSIN (744XFE3JS8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: VADIM KASSIN (744XFE3JS8)";
+				"ARCHS[sdk=*]" = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Moslight LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Moslight LLC";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -453,8 +456,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PROVISIONING_PROFILE = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
+				PROVISIONING_PROFILE = "968F0A99-02EB-4CDD-89F9-25C4BF2CE20B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "968F0A99-02EB-4CDD-89F9-25C4BF2CE20B";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -465,8 +468,12 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: VADIM KASSIN (744XFE3JS8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: VADIM KASSIN (744XFE3JS8)";
+				"ARCHS[sdk=*]" = (
+					armv7,
+					armv6,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Moslight LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Moslight LLC";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -475,8 +482,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
+				PROVISIONING_PROFILE = "968F0A99-02EB-4CDD-89F9-25C4BF2CE20B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "968F0A99-02EB-4CDD-89F9-25C4BF2CE20B";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -486,14 +493,15 @@
 		DD830E3C13F644C000B3389A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: VADIM KASSIN (744XFE3JS8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: VADIM KASSIN (744XFE3JS8)";
+				CODE_SIGN_ENTITLEMENTS = iUnRewards.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Moslight LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Moslight LLC";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iu/iUnRewards-Prefix.pch";
 				INFOPLIST_FILE = "iu/iUnRewards-Info.plist";
 				PRODUCT_NAME = iUnRewards;
-				PROVISIONING_PROFILE = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
+				PROVISIONING_PROFILE = "968F0A99-02EB-4CDD-89F9-25C4BF2CE20B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "968F0A99-02EB-4CDD-89F9-25C4BF2CE20B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -501,14 +509,19 @@
 		DD830E3D13F644C000B3389A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: VADIM KASSIN (744XFE3JS8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: VADIM KASSIN (744XFE3JS8)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				CODE_SIGN_ENTITLEMENTS = iUnRewards.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Moslight LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Moslight LLC";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iu/iUnRewards-Prefix.pch";
 				INFOPLIST_FILE = "iu/iUnRewards-Info.plist";
 				PRODUCT_NAME = iUnRewards;
-				PROVISIONING_PROFILE = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8F81CC55-63B8-4AAE-8B25-B4ACE2F2C206";
+				PROVISIONING_PROFILE = "968F0A99-02EB-4CDD-89F9-25C4BF2CE20B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "968F0A99-02EB-4CDD-89F9-25C4BF2CE20B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
