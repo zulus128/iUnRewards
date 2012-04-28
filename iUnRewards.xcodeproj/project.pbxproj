@@ -28,6 +28,7 @@
 		36585535154906AB0038C9B9 /* mail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3658552F154906AB0038C9B9 /* mail@2x.png */; };
 		36585536154906AB0038C9B9 /* right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 36585530154906AB0038C9B9 /* right-arrow.png */; };
 		366E8FEF154AC6D700CBA64B /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 366E8FEE154AC6D700CBA64B /* Icon-144.png */; };
+		368BAB1A154BE3F4007D7C4F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB9EB9315269F17006420FD /* Icon.png */; };
 		DD3E17F114813AF900CC7468 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3E17F014813AF900CC7468 /* Common.m */; };
 		DD7591AA15269E820032A9BA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = DD7591A915269E820032A9BA /* Icon-72.png */; };
 		DD830E0813F644BF00B3389A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD830E0713F644BF00B3389A /* UIKit.framework */; };
@@ -46,7 +47,6 @@
 		DD830E3413F644C000B3389A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD830E3213F644C000B3389A /* InfoPlist.strings */; };
 		DD830E3613F644C000B3389A /* iuTests.h in Resources */ = {isa = PBXBuildFile; fileRef = DD830E3513F644C000B3389A /* iuTests.h */; };
 		DD830E3813F644C000B3389A /* iuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD830E3713F644C000B3389A /* iuTests.m */; };
-		DDB9EB9415269F17006420FD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB9EB9315269F17006420FD /* Icon.png */; };
 		DDB9EB9715269F1D006420FD /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = DDB9EB9615269F1D006420FD /* Icon-114.png */; };
 		DDEDBECC150AAFBD00926102 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DDEDBECB150AAFBD00926102 /* Settings.bundle */; };
 		F27C688E14D6BCAA0010DE6D /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = F27C688D14D6BCAA0010DE6D /* Entitlements.plist */; };
@@ -315,7 +315,6 @@
 				F27C688E14D6BCAA0010DE6D /* Entitlements.plist in Resources */,
 				DDEDBECC150AAFBD00926102 /* Settings.bundle in Resources */,
 				DD7591AA15269E820032A9BA /* Icon-72.png in Resources */,
-				DDB9EB9415269F17006420FD /* Icon.png in Resources */,
 				DDB9EB9715269F1D006420FD /* Icon-114.png in Resources */,
 				36091DF015330E4500E58CE8 /* lef.png in Resources */,
 				36091DF115330E4500E58CE8 /* refresh.png in Resources */,
@@ -338,6 +337,7 @@
 				362F5B35154ABE0A00FC91D6 /* Default-Portrait@2x~ipad.png in Resources */,
 				362F5B37154ABE1500FC91D6 /* Default-Landscape@2x~ipad.png in Resources */,
 				366E8FEF154AC6D700CBA64B /* Icon-144.png in Resources */,
+				368BAB1A154BE3F4007D7C4F /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
